@@ -1,17 +1,69 @@
+//My Beyond Requirements was creating a way to create a new Journal File where the user could upload entries.
+
 using System;
+using System.ComponentModel;
+using System.Formats.Asn1;
+using System.IO.Enumeration;
 
 class Program
 {
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Journal Project.");
+        Console.WriteLine("");
+        string answer = "0";
+        // string filename = "myFile.txt";
 
-        1.Write
-        2.DIsplay
-        3.Load
-        4.Save
-        5.Quite
-    
+        Journal entry1 = new Journal();
+
+
+        do
+        {
+            Console.WriteLine("Please Select an option: ");
+            Console.WriteLine("1. Write New Entry ");
+            Console.WriteLine("2. Display Journal Entries ");
+            Console.WriteLine("3. Save to Journal File ");
+            Console.WriteLine("4. Load existing Journal File");
+            Console.WriteLine("5. Create new Journal File ");
+            Console.WriteLine("0. Quit ");
+            answer = Console.ReadLine();
+
+
+            if (answer == "1")
+            {
+                Prompt prompt1 = new Prompt();
+                prompt1._prompt = prompt1.GeneratePrompt();
+                Console.WriteLine(prompt1._prompt);
+                entry1.AddEntry();
+
+            }
+            if (answer == "2")
+            {
+
+                entry1.DisplayAllEntries();
+            }
+            if (answer == "3")
+            {
+                entry1.SaveEntry();
+            }
+            if (answer == "4")
+            {
+                entry1.LoadEntry();
+            }
+            if (answer == "5")
+            {
+                Console.WriteLine("Name your new Journal File: ");
+                string fileName = Console.ReadLine();
+                string path = Path.Combine(Environment.CurrentDirectory, fileName);
+                // @"C:\Journal";
+                File.WriteAllText(path, fileName);
+
+                Console.WriteLine($"Congradulations! Your file, {fileName} was created. Please select 'Save' to begin saving your entries into this new file.");
+
+            }
+
+        } while (answer != "0");
+
 
 
     }
