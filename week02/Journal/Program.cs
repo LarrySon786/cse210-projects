@@ -31,9 +31,6 @@ class Program
 
             if (answer == "1")
             {
-                Prompt prompt1 = new Prompt();
-                prompt1._prompt = prompt1.GeneratePrompt();
-                Console.WriteLine(prompt1._prompt);
                 entry1.AddEntry();
 
             }

@@ -44,6 +44,10 @@ class Journal
 
     public void AddEntry()
     {
+        Prompt prompt1 = new Prompt();
+        prompt1._prompt = prompt1.GeneratePrompt();
+        Console.WriteLine(prompt1._prompt);
+
         Entry entry1 = new Entry();
         entry1._date = Convert.ToString(DateTime.Today);
         
