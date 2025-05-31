@@ -4,7 +4,62 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the OnlineOrdering Project.");
+        // Console.WriteLine("Hello World! This is the OnlineOrdering Project.");
+
+
+        //Order 1
+        List<Order> orders = new List<Order>();
+        List<Product> products = new List<Product>();
+        Address address = new Address("1234 Bakers Lane", "Smithville", "New York", "22335", "USA");
+        Customer customer = new Customer("Johhny Seed", address);
+
+
+        Product vitaminD = new Product("Vitamin D", "3355", 9.99, 2);
+        Product iron = new Product("Iron", "4367", 13.99, 1);
+
+        products.Add(vitaminD);
+        products.Add(iron);
+
+        Order order = new Order(products, customer);
+
+        //Order 2
+        List<Product> products2 = new List<Product>();
+        Address address2 = new Address("6789 Shreve Court", "Teropolis", "Ontario", "77791", "Canada");
+        Customer customer2 = new Customer("Larry Son", address2);
+
+        Product zinc = new Product("Zinc", "00334", 19.99, 3);
+        Product magnesium = new Product("Magnesium", "6711", 24.99, 1);
+
+        products2.Add(zinc);
+        products2.Add(magnesium);
+
+        Order order2 = new Order(products2, customer2);
+
+        orders.Add(order);
+        orders.Add(order2);
+
+        Console.WriteLine("-----------------------------------------------------");
+
+        foreach (Order item in orders)
+        {
+            Console.WriteLine("Packaging Label: ");
+            item.GetPackingLabel();
+            Console.WriteLine("");
+
+            Console.WriteLine("Shipping Label: ");
+            item.GetShippingLabel();
+            Console.WriteLine("");
+
+
+            double total = item.CalculateTotal();
+            Console.WriteLine($"Order total: ${total}");
+            Console.WriteLine("-----------------------------------------------------");
+
+        }
+        
+
+
+
     }
 }
 
