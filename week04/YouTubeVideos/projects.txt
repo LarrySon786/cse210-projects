@@ -1,13 +1,22 @@
-using System;
+YOUTUBE PROJECT
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello World! This is the OnlineOrdering Project.");
-    }
-}
 
+//Classes
+//1) video - Attributes - track's title, author, length in seconds. Also stores a List<comments> of comments
+//2) Comments - Attributes - track's name of person making comment, text of comment.
+
+// Write program that creates 3 videos with 3 comments each
+// Create a list of List<video> in main program
+
+//Display all video titles, authors, length, number of comments, and actual comment information in main
+
+//Methods  Behavior
+//video - Iterate through video List to display video title, author, length, and number of comments. Calls the comment display method to display comments.
+//Comments - Iterate through comments List. Display comment will print the Author and text of their comment.
+
+
+
+ONLINE ORDERING
 
 //Clases
 //1) Product - Attributes - Tracks Name, product ID, price, and quantity
@@ -30,3 +39,6 @@ class Program
 //Getters/setters as needed
 
 //Program must create two orders with 2-3 products each. Calls the methods to get the packing label, shipping label, and the total price of the order. Program displays results of all these methods
+
+
+
