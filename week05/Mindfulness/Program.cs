@@ -1,3 +1,5 @@
+//Exceeding Requirements - I made it so the program keeps a log of all the activities and how often they were done. This log displays after quiting the program.
+
 using System;
 using System.ComponentModel.Design;
 using System.Formats.Asn1;
