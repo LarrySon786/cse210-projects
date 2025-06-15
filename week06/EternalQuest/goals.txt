@@ -1,0 +1,4 @@
+190
+SimpleGoal,cheese,cracker,40,True
+EternalGoal,milk,honey,60
+ChecklistGoal,Bean,butter,90,4,4
